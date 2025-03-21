@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'cyber';
+    src: url('../public/cyberpunk.otf') format('truetype');
+}
+
+
+* {
+    font-family: 'cyber', sans-serif;
+    font-size: 14px;
+}
+
+.pad {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.outerPad {
+    width: 99.5%;
+    height: 99%;
+    border: 2px solid #A03F34;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 0 10px rgba(244, 2, 2, 1),
+        /* Intense glow around the border */
+        0 0 10px rgba(244, 2, 2, 0.8),
+        /* Mid-level glow */
+        0 0 20px rgba(244, 2, 2, 0.6),
+        /* Background glow */
+        inset 0 0 10px rgba(244, 2, 2, 0.9);
+}
+
+.innerPad {
+    width: 40%;
+    height: 40%;
+    border: 2px solid #A03F34;
+    border-radius: 50%;
+    background: radial-gradient(#a03f342d 5%, black 60%);
+    position: relative;
+    z-index: 1;
+    transition: background 0.2s ease-out;
+    box-shadow:
+        0 0 10px rgba(244, 2, 2, 1),
+        /* Intense glow around the border */
+        0 0 10px rgba(244, 2, 2, 0.8),
+        /* Mid-level glow */
+        0 0 20px rgba(244, 2, 2, 0.6),
+        /* Background glow */
+        inset 0 0 10px rgba(244, 2, 2, 0.9);
+}
+
+.innerPad:hover {
+    animation: glow 0.6s ease;
+}
+
+@keyframes glow {
+    0% {
+        background: radial-gradient(#a03f342d 5%, black 60%);
+    }
+
+    50% {
+        background: radial-gradient(#a03f343c 10%, black 70%);
+    }
+
+    100% {
+        background: radial-gradient(#a03f3457 15%, black 70%);
+    }
+}
+
+.button {
+    background-color: transparent;
+    color: #A03F34;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    text-shadow:
+        0 0 10px rgba(244, 2, 2, 1),
+        /* Intense glow */
+        0 0 10px rgba(244, 2, 2, 0.8),
+        /* Mid-level glow */
+        0 0 10px rgba(244, 2, 2, 0.6);
+    /* Softer outer glow */
+    font-weight: bold;
+    background: none;
+    transition: text-shadow 0.2s ease-in-out;
+}
+
+
+button:hover,
+button:active {
+    text-shadow:
+        0 0 15px rgba(244, 2, 2, 1),
+        0 0 30px rgba(244, 2, 2, 0.9),
+        0 0 40px rgba(244, 2, 2, 0.8);
+}
+
+.top {
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.bottom {
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.menuButton {
+    cursor: pointer;
+    font-size: 20px;
+}

@@ -1,0 +1,202 @@
+
+.screen {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    flex-basis: calc(40px + 10px);
+    border-bottom: 2px solid #a83023;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 
+    0 0 10px rgba(244, 2, 2, 1),  /* Intense glow around the border */
+    0 0 10px rgba(244, 2, 2, 0.8), /* Mid-level glow */
+    0 0 20px rgba(244, 2, 2, 0.6), /* Background glow */
+    inset 0 0 10px rgba(244, 2, 2, 0.9);
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
+
+.screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../public/wall2.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    box-shadow: 
+    0 0 10px rgba(244, 2, 2, 1),  /* Intense glow around the border */
+    0 0 10px rgba(244, 2, 2, 0.8), /* Mid-level glow */
+    0 0 10px rgba(244, 2, 2, 0.6), /* Background glow */
+    inset 0 0 10px rgba(244, 2, 2, 0.9);
+    z-index: 0; 
+}
+
+.screen.menu-active::before {
+  filter: blur(5px); 
+}
+
+.screen * {
+    position: relative; 
+    z-index: 1;
+}
+
+.menu {
+    position: absolute;
+    font-weight: bolder;
+    font-size: large;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    /* background: #a8302318; */
+    background: linear-gradient(90deg, rgba(168, 48, 35, 0.1) 0%, rgba(13, 13, 14, 0.877) 100%);
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    border-right: 2px solid #a83023de;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    box-shadow: 
+    0 0 10px rgba(244, 2, 2, 1),  /* Intense glow around the border */
+    0 0 10px rgba(244, 2, 2, 0.8), /* Mid-level glow */
+    0 0 20px rgba(244, 2, 2, 0.6), /* Background glow */
+    inset 0 0 10px rgba(244, 2, 2, 0.9);
+}
+
+.menu.visible 
+{
+    left: -30%;
+}
+
+ul {
+    width: 60%;
+    list-style: none;
+    padding: 0;
+    margin-top: -60%;
+    margin-right: -5%;
+  }
+  
+  li {
+    width: 100%;
+    padding: 20px;
+    margin-left: -23px;
+    color: #a83023;
+  }
+
+  .selected {
+    background-color: rgba(133, 232, 236, 0.473); /* Faint background */
+    color: rgb(133, 232, 236); /* Keep the same cyan text color */
+    border: none; /* Remove solid border */
+
+    /* Neon cyan glow effect */
+    box-shadow: 
+        0 0 10px rgba(133, 232, 236, 1),  /* Intense glow close */
+        0 0 10px rgba(133, 232, 236, 0.8), /* Mid-level glow */
+        0 0 20px rgba(133, 232, 236, 0.6), /* Soft distant glow */
+        inset 0 0 10px rgba(133, 232, 236, 0.8); /* Inner glow */
+    
+    padding: 10px 12px; /* Adjust spacing */
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Smooth effect */
+}
+
+.selected::after {
+  content: '>';
+  color: rgb(133, 232, 236); /* Match the same cyan color */
+  position: absolute;
+  right: 10px;
+
+  /* Neon cyan glow effect */
+  text-shadow: 
+      0 0 10px rgba(133, 232, 236, 1),  /* Close glow */
+      0 0 20px rgba(133, 232, 236, 0.8), /* Mid glow */
+      0 0 40px rgba(133, 232, 236, 0.6); /* Soft glow */
+}
+
+
+  hr {
+    border: 0;
+    height: 3px;
+    background: rgba(255, 0, 0, 0.788);
+    margin-left: -20px;
+    box-shadow: 
+        0 0 10px rgba(244, 2, 2, 1),  /* Intense glow around */
+        0 0 30px rgba(244, 2, 2, 0.8), /* Mid-level glow */
+        0 0 60px rgba(244, 2, 2, 0.6); /* Background glow */
+  }
+
+  .selectedItem {
+    background-color: rgba(0, 0, 0, 0.253);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(133, 232, 236);
+    text-shadow: 
+      0 0 10px rgba(133, 232, 236, 1),  /* Close glow */
+      0 0 20px rgba(133, 232, 236, 0.8), /* Mid glow */
+      0 0 40px rgba(133, 232, 236, 0.6); /* Soft glow */
+      box-shadow: 
+      0 0 20px rgba(244, 2, 2, 1),  /* Intense glow around the border */
+      0 0 50px rgba(244, 2, 2, 0.8), /* Mid-level glow */
+      0 0 100px rgba(244, 2, 2, 0.6), /* Background glow */
+      inset 0 0 20px rgba(244, 2, 2, 0.9);
+}
+
+
+.musicPlayer {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.musicPlayer img {
+  width: 60%;
+  height: auto;
+  box-shadow: 
+  0 0 20px rgb(35, 226, 252),  /* Intense glow around the border */
+  0 0 50px rgba(2, 216, 244, 0.8), /* Mid-level glow */
+  0 0 100px rgba(2, 135, 244, 0.6), /* Background glow */
+  inset 0 0 20px rgba(2, 244, 244, 0.9);
+  filter: hue-rotate(180deg);
+}
+
+.musicPlayer .progress {
+  width: 100%;
+  height: 2px;
+  margin-top: 30px;
+  background-color: rgb(2, 244, 244, 0.9);
+  box-shadow: 
+  0 0 10px rgba(133, 232, 236, 1),  /* Intense glow close */
+  0 0 10px rgba(133, 232, 236, 0.8), /* Mid-level glow */
+  0 0 20px rgba(133, 232, 236, 0.6), /* Soft distant glow */
+  inset 0 0 10px rgba(133, 232, 236, 0.8); /* Inner glow */
+}
+
+.musicPlayer .progress .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: -4px;
+  background-color: rgb(2, 244, 244, 0.9);
+  box-shadow: 
+  0 0 10px rgba(133, 232, 236, 1),  /* Intense glow close */
+  0 0 10px rgba(133, 232, 236, 0.8), /* Mid-level glow */
+  0 0 20px rgba(133, 232, 236, 0.6), /* Soft distant glow */
+  inset 0 0 10px rgba(133, 232, 236, 0.8); /* Inner glow */
+}
+

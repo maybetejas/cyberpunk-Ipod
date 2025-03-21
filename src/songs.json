@@ -1,0 +1,33 @@
+[
+    {
+      "title": "Trauma",
+      "artist": "2hollis",
+      "src": "./trauma.mp3",
+      "cover": "/trauma.png"
+    },
+    {
+      "title": "4ÆM",
+      "artist": "Grimes",
+      "src": "/grimes.mp3",
+      "cover": "/4aem.png"
+    },
+    {
+      "title": "Cyber",
+      "artist": "CyberPunk 2077 soundtrack",
+      "src": "/cyber.mp3",
+      "cover": "/cyber.png"
+    },
+    {
+      "title": "I SEEEEEE YOU BABY BOI",
+      "artist": "Playboi Carti",
+      "src": "/carti.mp3",
+      "cover": "/blah.png"
+    },
+    {
+      "title": "Immaterial",
+      "artist": "SOPHIE",
+      "src": "/Immaterial.mp3",
+      "cover": "/immmaterial.png"
+    }
+  ]
+  
