@@ -1,4 +1,4 @@
-# Cyberpunk iPod Classic Clone 🎵💿  
+# Cyberpunk iPod Classic Clone 
 
 A **cyberpunk-inspired** iPod Classic clone built with **React**. This app brings back the nostalgic feel of the iPod while adding a futuristic twist with sleek visuals and animations.  
 
