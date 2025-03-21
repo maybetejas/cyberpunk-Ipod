@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b2e16468.css",
-    "main.js": "/static/js/main.cc908ebf.js",
-    "static/media/wall2.gif": "/static/media/wall2.35979ef2648579494660.gif",
-    "static/media/cyberpunk.otf": "/static/media/cyberpunk.457781a8526b5b55c4a3.otf",
-    "index.html": "/index.html",
-    "main.b2e16468.css.map": "/static/css/main.b2e16468.css.map",
-    "main.cc908ebf.js.map": "/static/js/main.cc908ebf.js.map"
+    "main.css": "./ /static/css/main.36109d89.css",
+    "main.js": "./ /static/js/main.cc908ebf.js",
+    "static/media/wall2.gif": "./ /static/media/wall2.35979ef2648579494660.gif",
+    "static/media/cyberpunk.otf": "./ /static/media/cyberpunk.457781a8526b5b55c4a3.otf",
+    "index.html": "./ /index.html",
+    "main.36109d89.css.map": "./ /static/css/main.36109d89.css.map",
+    "main.cc908ebf.js.map": "./ /static/js/main.cc908ebf.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2e16468.css",
+    "static/css/main.36109d89.css",
     "static/js/main.cc908ebf.js"
   ]
 }
